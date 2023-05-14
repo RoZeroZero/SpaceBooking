@@ -8,37 +8,18 @@ let swiper = new Swiper(".mySwiper", {
 
 $(document).ready(function() {
 
-    $("#generate-string").click(function(e) {
-      $.post("/generator", {"length": $("input[name='length']").val()})
-       .done(function(string) {
-        $("#the-string").show();
-        $("#the-string input").val(string);
-      });
-      e.preventDefault();
-    });
-
-    $("#replace-string").click(function(e) {
+    $("#book-park-1").click(function(e) {
       $.ajax({
-        type: "PUT",
+        type: "POST",
         url: "/generator",
-        data: {"another_string": $("#the-string input").val()}
-      })
-      .done(function() {
-        alert("Replaced!");
+        data: { "length": $("input[name='length']").val() },
+        success: function(string) {
+          $("#the-string").show();
+          document.getElementById("book-park-1").style.backgroundColor = '#F90077';
+          $("#the-string input").val(string);
+        }
       });
       e.preventDefault();
     });
-
-    $("#delete-string").click(function(e) {
-      $.ajax({
-        type: "DELETE",
-        url: "/generator"
-      })
-      .done(function() {
-        $("#the-string").hide();
-      });
-      e.preventDefault();
-    });
-
 });
 

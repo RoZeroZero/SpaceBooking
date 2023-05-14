@@ -85,6 +85,7 @@ p {
 } 
 
 .block-canvas {
+  display: flex;
   position: absolute;
   height: 80vh;
   width: 90vw;
@@ -127,4 +128,21 @@ p {
   to {
     left: -200vw;
   }
+}
+
+#book-park-1 {
+  width: 50px;
+  height: 100px;
+}
+#book-park-2 {
+  width: 50px;
+  height: 100px;
+}
+#book-park-3 {
+  width: 50px;
+  height: 100px;
+}
+#book-park-4 {
+  width: 50px;
+  height: 100px;
 }
