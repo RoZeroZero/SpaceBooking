@@ -110,6 +110,21 @@ p {
   animation-name: slidein;
 }
 
+.block-canvas * {
+  font-size: 9vw;
+  color: #f2efa0;
+  width: 204px;
+  height: 20vw;
+  background-color: #f90077;
+  margin: 7vw;
+  border-radius: 40px;
+  border: solid 5px #f90077;
+}
+
+.block-canvas *:hover {
+  border: solid 5px #f2efa0;
+}
+
 @keyframes slidein {
   from {
     left: -200vw;
@@ -130,19 +145,3 @@ p {
   }
 }
 
-#book-park-1 {
-  width: 50px;
-  height: 100px;
-}
-#book-park-2 {
-  width: 50px;
-  height: 100px;
-}
-#book-park-3 {
-  width: 50px;
-  height: 100px;
-}
-#book-park-4 {
-  width: 50px;
-  height: 100px;
-}
