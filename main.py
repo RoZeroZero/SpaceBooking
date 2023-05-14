@@ -60,4 +60,6 @@ if __name__ == '__main__':
     }
     webapp = StringGenerator()
     webapp.generator = StringGeneratorWebService()
+    cherrypy.config.update({'server.socket_port': 8099})
+    cherrypy.server.socket_host = '192.168.4.36'
     cherrypy.quickstart(webapp, '/', conf)
